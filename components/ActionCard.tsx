@@ -28,7 +28,7 @@ const ActionCard = () => {
           style={styles.image}
         />
         <View style={styles.bodyContainer}>
-          <Text numberOfLines={3}>
+          <Text numberOfLines={3} style={styles.bodyText}>
             Just like every year, Javascript brings in new features. This year
             javascript is bringing 4 new features, which are almost in
             production rollout. I won't be wasting much more time and directly
@@ -42,7 +42,9 @@ const ActionCard = () => {
                 'https://blog.learncodeonline.in/whats-new-in-javascript-21-es12',
               )
             }>
-            <Text>Read more</Text>
+            <View style={styles.footerContainer}>
+              <Text style={styles.footerText}>Read more</Text>
+            </View>
           </TouchableOpacity>
         </View>
       </View>
@@ -73,11 +75,32 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
   },
-  headingContainer: {},
-  headerText: {},
+  headingContainer: {
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+  },
+  headerText: {
+    fontWeight: '900',
+    color: '#687387',
+    alignSelf: 'center',
+  },
   image: {
     height: 150,
   },
-  bodyContainer: {},
-  footerContainer: {},
+  bodyContainer: {
+    padding: 8,
+  },
+  bodyText: {
+    lineHeight: 20,
+  },
+  footerContainer: {
+    flex: 1,
+    alignItems: 'flex-end',
+    paddingHorizontal: 8,
+    marginBottom: 8,
+  },
+  footerText: {
+    color: '#428bca',
+    fontWeight: 'bold',
+  },
 });
